@@ -1,8 +1,68 @@
 <?php
-define('GREETING', 'Hello, World!',true);
-echo GREETING;
+// Variables
+// debe comenzar con $
+
+$variable="5"; // esto es una cadena
+echo "$variable es una cadena";
 echo "<br>";
-echo greeting;
+$variable=34; // esto es un entero $cadena cambio de tipo
+echo "$variable es un entero ahora";
+echo "<br>";
+
+// Establecer el tipo con settype
+settype($variable, "string");
+echo "$variable es una cadena ahora";
+echo "<br>";
+echo var_dump($variable);
+echo "<br>";
+
+// Casting de variables
+
+$variable = "23";
+$variable = (int)$variable;
+echo $variable;
+echo "<br>";
+
+// Ambitos de las variables
+ echo "<br>";
+function mifuncion(){
+    //estoy dentro de la funcion, para acceder a las variables utilizo $GLOBALS
+    echo $GLOBALS["variable"] . "<br>";
+    $variable="hola";
+    echo $variable . "<br>";
+}
+
+mifuncion(); // estoy dentro de la funcion, para acceder a las variables utilizo $GLOBALS
+echo $variable . "<br>"; // estoy fuera de la funcion
+
+echo"<br>";
+$mivariable="hola";
+$otravariable="mundo";
+
+function mifuncion2(){
+    global $mivariable,$otravariable;
+    echo $mivariable . "<br>";
+    echo $otravariable . "<br>";
+}
+
+mifuncion2();
+echo "<br>";
+
+// Variables del sistema
+echo $_SERVER['HTTP_USER_AGENT'] . "<br>";
+echo $_SERVER['HTTP_ACCEPT_LANGUAGE'] . "<br>";
+echo $_SERVER['HTTP_REFERER'] . "<br>";
+
+// Constantes
+// El tercer parámetro es para que sea case sensitive
+// Pero no se usa mas desde PHP 8, todo es case sensitive
+define('GREETING', 'Hello, World!',true); 
+// el true era para que no distinga entre mayusculas y minusculas o sea case in-sensitive
+echo greeting; // esto no tira error porque PHP 8 ignora el true
+echo "<br>";
+echo GREETING;
+
+echo "<br>";
 
 
 
