@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Formularios</h1>
+    <form action="">
+      <label for="nom">Nombre</label>
+      <input
+        type="text"
+        name="nombre"
+        id="nom"
+        class=""
+        placeholder="Ingrese su nombre"
+        title="Este campo es obligatorio"
+      />
+      <br />
+      <label for="ape">Apellido</label>
+      <input
+        type="text"
+        name="apellido"
+        id="ape"
+        class=""
+        placeholder="Ingrese su apellido"
+        title="Este campo es obligatorio"
+      />
+      <br />
+      <label for="email">Email</label>
+      <input
+        type="mail"
+        name="email"
+        id="email"
+        placeholder="Ingrese su email"
+        title="Este campo es obligatorio"
+      />
+      <br />
+      <label for="usuario"> Usuario</label>
+      <input
+        type="text"
+        name="usuario"
+        id="usuario"
+        pattern="[A-Za-z0-9]{5,15}"
+        title="El usuario debe tener entre 5 y 15 caracteres, solo letras y números"
+      />
+      <br />
+      <label for="password"> Contraseña</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula y un número"
+      />
+      <br />
+      <label for="DNI"> DNI</label>
+      <input type="text" name="DNI" id="DNI" pattern="\d{8}" />
+      <br />
+      <label for=""> color</label>
+      <input type="color" name="color" id="color" />
+      <br />
+      <h3>tecnologias conocidas</h3>
+      <label for="tecnologia"></label>
+      php <input type="checkbox" name="tecnologia" id="php" value="php" />
+      javascript
+      <input
+        type="checkbox"
+        name="tecnologia"
+        id="javascript"
+        value="javascript"
+      />
+      java
+      <input type="checkbox" name="tecnologia" id="java" value="java" /> python
+      <input type="checkbox" name="tecnologia" id="python" value="python" />
+      ruby <input type="checkbox" name="tecnologia" id="ruby" value="ruby" />
+      <br />
+      <label for="turno">Turnos</label>
+      Mañana
+      <input type="radio" name="turno" id="manana" value="manana" />
+      Tarde
+      <input type="radio" name="turno" id="tarde" value="tarde" /> Noche
+      <input type="radio" name="turno" id="noche" value="noche" />
+      <br />
+      <br />
+      <textarea name="mensaje" id="" cols="30" rows="10">
+deja un comentario</textarea
+      >
+      <br />
+      <select name="pais" id="">
+        <option value="1">Argentina</option>
+        <option value="2">Brasil</option>
+        <option value="3">Uruguay</option>
+        <option value="4">Paraguay</option>
+        <option value="5">Chile</option>
+      </select>
+
+      <br />
+    <input type="search" name="buscar" id="buscar" placeholder="Buscar..." />
+
+      <br />
+      <button type="submit">Enviar</button>
+      <br />
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
