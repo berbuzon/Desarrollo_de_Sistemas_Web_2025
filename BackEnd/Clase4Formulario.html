@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>FORMULARIO</h1>
+    <h2>Pasaje de datos por GET</h2>
+    <form action="intermediario_get.php" method="get">
+      <label for="nombre"></label>
+      <input
+        type="text"
+        name="campo_nombre"
+        id="nombre"
+        required
+        title="El nombre es obligatorio"
+        value="Bernardo"
+        pattern="[A-Za-z]+"
+        maxlength="10"
+      />
+      <br />
+      <label for="apellido"></label>
+      <input
+        type="text"
+        name="campo_apellido"
+        id="apellido"
+        placeholder="Ingrese su apellido"
+        value="Eliezer"
+      />
+      <input type="submit" value="Enviar" />
+    </form>
+
+    <h2>Pasaje de datos por POST</h2>
+    <form action="intermediario_post.php" method="post">
+      <label for="nombre"></label>
+      <input
+        type="text"
+        name="campo_nombre"
+        id="nombre"
+        placeholder="Ingrese su nombre"
+        value="Bernardo"
+      />
+      <br />
+      <label for="apellido"></label>
+      <input
+        type="text"
+        name="campo_apellido"
+        id="apellido"
+        placeholder="Ingrese su apellido"
+        value="Eliezer"
+      />
+      <input type="submit" value="Enviar" />
+      <br />
+      <label for="color">Elija un color:</label>
+      <br />
+      <input type="radio" name="color" value="rojo" id="rojo" />
+      <label for="rojo">Rojo</label>
+      <input type="radio" name="color" value="verde" id="verde" />
+      <label for="verde">Verde</label>
+      <br />
+      <input type="checkbox" name="acepto" id="acepto" />
+      <label for="acepto">Acepto terminos y condiciones</label>
+      <br />
+      <input type="hidden" name="edad" value="30" />
+    </form>
+  </body>
+</html>
+
+<!-- http://localhost/Desarrollo_de_Sistemas_Web_2025/BackEnd/procesar.php?nombre=Bernardo&apellido=Eliezer -->
+<!--Todo lo que se ingrese en el formulario se va a ver reflejado en la URL
+al momento de enviarlo. -->
+
+<!-- El metodo GET es visible en la URL, mientras que el metodo POST no lo es. -->
+<!-- El metodo POST es mas seguro que el metodo GET. -->
+
+<!-- input hidden es para enviar datos que no se ven en el formulario pero si se envian al servidor.-->
