@@ -95,9 +95,50 @@ deja un comentario</textarea
         <option value="4">Paraguay</option>
         <option value="5">Chile</option>
       </select>
-
       <br />
-    <input type="search" name="buscar" id="buscar" placeholder="Buscar..." />
+      <input type="search" name="buscar" id="buscar" placeholder="Buscar..." />
+      <br />
+      <label for="lenguaje">Lenguaje</label>
+      <input type="text" name="lenguaje" id="lenguaje" list="lenguajes" />
+      <datalist id="lenguajes">
+        <option value="php"></option>
+        <option value="javascript"></option>
+        <option value="java"></option>
+        <option value="python"></option>
+        <option value="ruby"></option>
+      </datalist>
+      <br />
+      <input type="file" name="archivo" id="archivo" />
+      <br />
+      <h3>camara frontal</h3>
+      <input
+        type="file"
+        name="camara"
+        id="camara"
+        accept="image/*"
+        capture="user"
+      />
+      <br />
+      <h3>camara trasera</h3>
+      <input
+        type="file"
+        accept="video/*"
+        capture="environment"
+        name="video"
+        id="video"
+        id="video"
+      />
+      <br />
+
+      <button popovertarget="info" popovertargetaction="toggle">Info</button>
+
+      <div id="info" popover>
+        <h3>Informacion</h3>
+        <p>Este es un formulario de ejemplo</p>
+        <button type="button" popovertarget="info" popovertargetaction="hide">
+          Cerrar
+        </button>
+      </div>
 
       <br />
       <button type="submit">Enviar</button>
