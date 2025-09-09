@@ -10,6 +10,7 @@ $sql = "INSERT INTO datos_usuarios (id_usuarios, usuarios, password) VALUES ('$i
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
+    echo "<br><a href='./form.php'>Regresar</a>";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
