@@ -1,0 +1,10 @@
+article{
+    color: blue
+}
+.destacado{
+    font-size: 50px;
+}   
+#sinstock{
+    color: red;
+    text-decoration: line-through;
+}

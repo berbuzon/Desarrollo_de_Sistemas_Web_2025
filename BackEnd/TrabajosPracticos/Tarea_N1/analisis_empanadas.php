@@ -70,7 +70,7 @@ function menorVenta($ventas)
     for ($i = 0; $i < count($ventas); $i++) {
         if ($menorVenta > $ventas[$i]) {
             $menorVenta = $ventas[$i];
-            $diaMenorVenta = $i+1;
+            $diaMenorVenta = $i + 1;
         }
     }
     return ['dia' => $diaMenorVenta, 'cantidad' => $menorVenta];
@@ -80,7 +80,6 @@ function menorVenta($ventas)
 $resultadoMayor = mayorVenta($empanadasVendidas);
 
 echo "El día de mayor venta fue el " . $resultadoMayor['dia'] . "\n";
-
 echo "La mayor venta fue de " . $resultadoMayor['cantidad'];
 echo "\n";
 echo "Listado de ventas diarias: \n";

@@ -9,7 +9,7 @@
 
 <body>
     <?php
-    include ('./navegacion.php');
+    include('./navegacion.php');
     include 'conn.php';
     $consulta = "SELECT * FROM datos_usuarios";
     $resultado = $conn->query($consulta);
@@ -33,7 +33,7 @@
         echo "0 results";
     }
     $conn->close();
-    include ('./footer.php');
+    include('./footer.php');
     ?>
 </body>
 

@@ -5,7 +5,7 @@ $pas = $_POST['pas'];
 
 require 'conn.php';
 
-// Corregir nombres de tabla y columnas para que coincidan con la base de datos
+// Insert data into the database
 $sql = "INSERT INTO datos_usuarios (id_usuarios, usuarios, password) VALUES ('$id', '$user', '$pas')";
 
 if (mysqli_query($conn, $sql)) {
