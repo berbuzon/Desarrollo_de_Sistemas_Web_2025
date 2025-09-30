@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grid + Responsive</title>
+
+  <style>
+    /* Estilos base */
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-size: 20px;
+      color: blue;
+      text-align: center;
+      background: #fafafa;
+    }
+
+    .navbar {
+      background-color: bisque;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    /* GRID contenedor principal */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas:
+        "t w f"
+        "t a b"
+        "t s s";
+      border: 2px solid rebeccapurple;
+      gap: 10px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    /* Cajas (coinciden las clases con las áreas) */
+    .s1 { /* f */
+      background-color: aquamarine;
+      grid-area: f;
+      border-radius: 30px;
+      padding: 20px;
+    }
+    .s2 { /* s */
+      background-color: #c3f50e;
+      grid-area: s;
+      border-radius: 30px;
+      padding: 20px;
+    }
+    .s3 { /* t */
+      background-color: #ff7fd4;
+      grid-area: t;
+      border-radius: 30px;
+      padding: 20px;
+    }
+    .s4 { /* w */
+      background-color: #ffe87f;
+      grid-area: w;
+      border-radius: 30px;
+      padding: 20px;
+    }
+    .s5 { /* a */
+      background-color: rgb(13, 238, 238);
+      grid-area: a;
+      border-radius: 30px;
+      padding: 20px;
+    }
+    .s6 { /* b */
+      background-color: #eeea0d;
+      grid-area: b;
+      border-radius: 30px;
+      padding: 20px;
+    }
+
+    /* Footer fuera del grid principal (si lo querés dentro, dale grid-area: f a un <footer> y quita .s1) */
+    .footer {
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      padding: 16px 20px;
+      background: #eee;
+      border-radius: 16px;
+      color: #333;
+    }
+
+    /* Responsive: reacomoda áreas sin media queries complejos */
+    @media screen and (max-width: 640px) {
+      .container{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+          "t t t"
+          "w b s"
+          "a f f";
+      }
+      .s4 {
+        font-weight: bold;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">Navegación</nav>
+
+  <main class="container">
+    <section class="s1">Sección F (s1) — área: <strong>f</strong></section>
+    <section class="s2">Sección S (s2) — área: <strong>s</strong></section>
+    <section class="s3">Sección T (s3) — área: <strong>t</strong></section>
+    <section class="s4">Sección W (s4) — área: <strong>w</strong></section>
+    <section class="s5">Sección A (s5) — área: <strong>a</strong></section>
+    <section class="s6">Sección B (s6) — área: <strong>b</strong></section>
+  </main>
+
+  <footer class="footer">Pie de página</footer>
+</body>
+</html>

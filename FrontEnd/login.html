@@ -9,26 +9,62 @@
         background-color: aquamarine;
         width: 300px;
         margin: auto;
-        margin-top: 150px;
+        margin-top: 10px;
+        padding: 20px;
+        padding-bottom: 50px;
+        border-radius: 10px;
+        padding-left: auto;
+        padding-right: auto;
+      }
+      .interno {
+        /* background-color: beige; */
+        width: 250px;
+        margin: auto;
+        background: linear-gradient(to right, rgb(0, 162, 255), lightblue);
+        padding: auto;
+        padding-bottom: 20px;
+        border-radius: 10px;
+      }
+      .input {
+        display: block;
+        height: 30px;
+        margin-bottom: 10px;
+        padding: auto;
+        margin-left: 20px;
+      }
+      .boton {
+        margin-left: 100px;
+        height: 30px;
+        width: 80px;
+        border-radius: 5px;
+        background-color: aquamarine;
       }
     </style>
   </head>
   <body>
     <main class="container">
-      <section>
+      <section class="interno">
         <h1>
           <form action="" method="post">
             Usuario:
             <input
+              class="input"
               type="text"
               name="user"
-              placeholder="Ingrese su usuario"
+              placeholder="Maria"
               id=""
             />
             <br />
-            Contraseña: <input type="password" name="pass" id="" />
+            Contraseña:
+            <input
+              class="input"
+              type="password"
+              name="pass"
+              id=""
+              placeholder="clave"
+            />
             <br />
-            <input type="submit" value="Enviar" />
+            <input class="boton" type="submit" value="Ingresar" />
           </form>
         </h1>
       </section>

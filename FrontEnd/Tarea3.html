@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Etiquetas bloque vs en línea</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 1rem; }
+    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    code { background: #f5f5f5; padding: 0 .25rem; border-radius: 3px; }
+    ul { margin: 0; padding-left: 1.25rem; }
+    h1 { margin: 0 0 .5rem; }
+    h2 { margin: .5rem 0; }
+  </style>
+</head>
+<body>
+  <h1>Etiquetas en bloque vs en línea</h1>
+  <div class="grid">
+    <section>
+      <h2>En bloque</h2>
+      <ul>
+        <li><code>div</code></li>
+        <li><code>p</code></li>
+        <li><code>h1</code>–<code>h6</code></li>
+        <li><code>header</code>, <code>footer</code>, <code>main</code>, <code>nav</code></li>
+        <li><code>section</code>, <code>article</code>, <code>aside</code></li>
+        <li><code>address</code></li>
+        <li><code>blockquote</code>, <code>pre</code>, <code>hr</code></li>
+        <li><code>ul</code>, <code>ol</code>, <code>li</code></li>
+        <li><code>dl</code>, <code>dt</code>, <code>dd</code></li>
+        <li><code>figure</code>, <code>figcaption</code></li>
+        <li><code>form</code>, <code>fieldset</code>, <code>legend</code></li>
+        <li><code>table</code></li>
+      </ul>
+    </section>
+    <section>
+      <h2>En línea</h2>
+      <ul>
+        <li><code>a</code>, <code>span</code>, <code>img</code>, <code>br</code></li>
+        <li><code>strong</code>, <code>b</code>, <code>em</code>, <code>i</code>, <code>u</code>, <code>s</code>, <code>mark</code>, <code>small</code></li>
+        <li><code>sub</code>, <code>sup</code>, <code>code</code>, <code>kbd</code>, <code>samp</code>, <code>var</code></li>
+        <li><code>time</code>, <code>abbr</code>, <code>cite</code>, <code>q</code>, <code>dfn</code></li>
+        <li><code>bdi</code>, <code>bdo</code>, <code>data</code>, <code>wbr</code></li>
+        <li><code>label</code>, <code>input</code>, <code>select</code>, <code>textarea</code>, <code>button</code></li>
+      </ul>
+    </section>
+  </div>
+  <p>Nota: con CSS puedes cambiarlo usando la propiedad <code>display</code>.</p>
+</body>
+</html>
